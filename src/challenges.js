@@ -2,7 +2,7 @@
 function compareTrue(booleanOne, booleanTwo) {
   if (booleanOne === true && booleanTwo === true) {
     return true;
-  } else if (booleanOne === false && booleanTwo === false) {
+  } else {
     return false;
   }
 }
@@ -36,8 +36,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = Math.max.apply(null, array);
+  let contador = 0;
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] === maiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
