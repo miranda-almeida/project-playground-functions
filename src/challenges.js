@@ -4,8 +4,6 @@ function compareTrue(booleanOne, booleanTwo) {
     return true;
   } else if (booleanOne === false && booleanTwo === false) {
     return false;
-  } else {
-    return false;
   }
 }
 
@@ -16,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let split = string.split(" ");
+  return split;
 }
 
 // Desafio 4
