@@ -80,46 +80,44 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let vogals = ['a','e','i','o','u'];
-  let numberLetter = ['1','2','3','4','5'];
+  let vogals = ['a', 'e' ,'i', 'o', 'u'];
+  let numberLetter = ['1', '2', '3', '4', '5'];
   let newString = '';
-
-  for (index = 0; index < string.length; index += 1){
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === vogals[0]) {
-        newString += numberLetter[0];
+      newString += numberLetter[0];
     } else if (string[index] === vogals[1]) {
-        newString += numberLetter[1];
+      newString += numberLetter[1];
     } else if (string[index] === vogals[2]) {
-        newString += numberLetter[2];
+      newString += numberLetter[2];
     } else if (string[index] === vogals[3]) {
-        newString += numberLetter[3];
+      newString += numberLetter[3];
     } else if (string[index] === vogals[4]) {
-        newString += numberLetter[4];
+      newString += numberLetter[4];
     } else {
-        newString += string[index];
+      newString += string[index];
     }
   }
   return newString;
 }
 
 function decode(string) {
-  let vogals = ['a','e','i','o','u'];
-  let numberLetter = ['1','2','3','4','5'];
+  let vogals = ['a', 'e', 'i', 'o', 'u'];
+  let numberLetter = ['1', '2', '3', '4', '5'];
   let newString = '';
-
-  for (index = 0; index < string.length; index += 1){
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === numberLetter[0]) {
-        newString += vogals[0];
+      newString += vogals[0];
     } else if (string[index] === numberLetter[1]) {
-        newString += vogals[1];
+      newString += vogals[1];
     } else if (string[index] === numberLetter[2]) {
-        newString += vogals[2];
+      newString += vogals[2];
     } else if (string[index] === numberLetter[3]) {
-        newString += vogals[3];
+      newString += vogals[3];
     } else if (string[index] === numberLetter[4]) {
-        newString += vogals[4];
+      newString += vogals[4];
     } else {
-        newString += string[index];
+      newString += string[index];
     }
   }
   return newString;
@@ -129,7 +127,7 @@ function decode(string) {
 function techList(array, name) {
   array.sort();
   let novoArray = [];
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     novoArray.push({tech: array[index], name: name})
   }
   if(array.length < 1) {
