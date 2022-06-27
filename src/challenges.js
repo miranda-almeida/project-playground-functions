@@ -29,8 +29,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  winsPoints = wins * 3;
-  tiesPoints = ties * 1;
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
   let totalPoints = winsPoints + tiesPoints;
   return totalPoints;
 }
@@ -48,8 +48,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let catOneDistance = Math.abs(mouse - cat1); // utilização do Math.abs() para retornar o valor absoluto no caso da posição ser negativa
+  let catTwoDistance = Math.abs(mouse - cat2); // dessa forma, a posição dos valores de posições -x, x na subtração não influenciam o resultado
+
+  if (catOneDistance < catTwoDistance){
+      return 'cat1';
+  } else if (catTwoDistance < catOneDistance) {
+      return 'cat2';
+  } else {
+      return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
