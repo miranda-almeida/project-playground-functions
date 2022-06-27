@@ -80,7 +80,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let vogals = ['a', 'e' ,'i', 'o', 'u'];
+  let vogals = ['a', 'e', 'i', 'o', 'u'];
   let numberLetter = ['1', '2', '3', '4', '5'];
   let newString = '';
   for (let index = 0; index < string.length; index += 1) {
@@ -128,9 +128,9 @@ function techList(array, name) {
   array.sort();
   let novoArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    novoArray.push({tech: array[index], name: name})
+    novoArray.push({ tech: array[index], name: name });
   }
-  if(array.length < 1) {
+  if (array.length < 1) {
     return 'Vazio!';
   }
   return novoArray;
