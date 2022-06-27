@@ -66,24 +66,63 @@ function fizzBuzz(array) {
   let substituir = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      substituir.push("fizzBuzz");
+      substituir.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      substituir.push("fizz");
+      substituir.push('fizz');
     } else if (array[index] % 5 === 0) {
-      substituir.push("buzz");
+      substituir.push('buzz');
     } else {
-      substituir.push("bug!");
+      substituir.push('bug!');
     }
   }
   return substituir;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vogals = ['a','e','i','o','u'];
+  let numberLetter = ['1','2','3','4','5'];
+  let newString = '';
+
+  for (index = 0; index < string.length; index += 1){
+    if (string[index] === vogals[0]) {
+        newString += numberLetter[0];
+    } else if (string[index] === vogals[1]) {
+        newString += numberLetter[1];
+    } else if (string[index] === vogals[2]) {
+        newString += numberLetter[2];
+    } else if (string[index] === vogals[3]) {
+        newString += numberLetter[3];
+    } else if (string[index] === vogals[4]) {
+        newString += numberLetter[4];
+    } else {
+        newString += string[index];
+    }
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let vogals = ['a','e','i','o','u'];
+  let numberLetter = ['1','2','3','4','5'];
+  let newString = '';
+
+  for (index = 0; index < string.length; index += 1){
+    if (string[index] === numberLetter[0]) {
+        newString += vogals[0];
+    } else if (string[index] === numberLetter[1]) {
+        newString += vogals[1];
+    } else if (string[index] === numberLetter[2]) {
+        newString += vogals[2];
+    } else if (string[index] === numberLetter[3]) {
+        newString += vogals[3];
+    } else if (string[index] === numberLetter[4]) {
+        newString += vogals[4];
+    } else {
+        newString += string[index];
+    }
+  }
+  return newString;
 }
 
 // Desafio 10
