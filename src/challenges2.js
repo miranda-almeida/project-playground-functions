@@ -1,6 +1,25 @@
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
 
+  for (let index = 0; index < array.length; index += 1) {
+    let counter = 0;
+    for (let repeticoes = 0; repeticoes < array.length; repeticoes +=1) {
+      if (array[index] === array[repeticoes]) {
+        counter ++;
+      }
+    }
+    if (array[index] < 0 || array[index] > 9 || counter >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } 
+  } 
+  let rearange = '(nn) nnnnn-nnnn';
+  for (let index = 0; index < rearange.length; index += 1) {
+    rearange = rearange.replace('n', array[index]);
+  }
+  return rearange;
 }
 
 // Desafio 12
